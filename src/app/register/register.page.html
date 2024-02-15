@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="login"
+      text="Takaisin">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<p class="pointsi">POINTSI</p>
+  <ion-card id="kortti">
+    <ion-card-title>REKISTERÖIDY</ion-card-title>
+    <ion-item>
+      <ion-label position="floating"><ion-icon name="person-outline"></ion-icon>Käyttäjänimi</ion-label>
+      <ion-input type="text" [(ngModel)]="username" onkeypress="if(event.charCode === 32)return false"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"> <ion-icon name="lock-closed-outline"></ion-icon>Salasana</ion-label>
+      <ion-input type="password" [(ngModel)]="password" onkeypress="if(event.charCode === 32)return false"></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-label position="floating"><ion-icon name="lock-closed-outline"></ion-icon>Varmista salasana</ion-label>
+      <ion-input type="password" [(ngModel)]="cpassword" onkeypress="if(event.charCode === 32)return false"></ion-input>
+    </ion-item>
+    
+    <ion-row id="tos">
+      <ion-checkbox color="secondary" [(ngModel)]="checkedbtn"></ion-checkbox>
+      <ion-label id="tosText">Hyväksyn <a routerLink="/tos">käyttöehdot ja tietosuojaselosteen</a></ion-label>
+    </ion-row>
+      
+    
+
+    <ion-button [disabled]="!checkedbtn" color="button" expand="block" shape="round" id="register" (click)="register()">Luo käyttäjä</ion-button>
+
+</ion-card>
+</ion-content>
+

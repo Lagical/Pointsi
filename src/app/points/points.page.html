@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="main"
+      text="Takaisin">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Historia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let histories of ((user | async)?.history).reverse()">
+    <p class="company">{{histories.comp}}</p>
+    <p class="text">Pisteet: {{histories.pts}}</p>
+    <span class="text">{{histories.rating}}</span>
+    <p class="text">Aika: {{histories.time | date: 'd.M.y HH:mm'}}</p> 
+    <div class="hr"></div>
+  </div>
+ 
+</ion-content>

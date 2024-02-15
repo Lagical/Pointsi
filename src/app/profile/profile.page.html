@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="main"
+      text="Takaisin">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Profiili</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="profile">
+    <ion-avatar>
+      <img src="../../assets/naikkonen.jpg" alt="">
+    </ion-avatar>
+
+    <p class="username"> {{(user | async)?.username}}</p>
+    <ion-card class="kortti">
+      <ion-card-header>
+        <ion-card-title>Pisteet: {{(user | async)?.credits}}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+    <ion-button color="button" expand="block" shape="round" (click)="logOut()" routerLink="/login" routerDirection="/back">Kirjaudu ulos</ion-button>
+  </ion-card>
+</ion-content>

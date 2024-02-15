@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [hidden]="!open4" [disabled]="!open4"defaultHref="companies"
+      text="Takaisin">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Kamera
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ <img class="kuvat" style="" [src]="image" />
+
+
+ <div class="stars" [hidden]="!open">
+  <ion-icon id="s5" class="star" name="star" (click)="s5()"></ion-icon>
+  <ion-icon id="s4" class="star" name="star" (click)="s4()"></ion-icon>
+  <ion-icon id="s3" class="star" name="star" (click)="s3()"></ion-icon>
+  <ion-icon id="s2" class="star" name="star" (click)="s2()"></ion-icon>
+  <ion-icon id="s1" class="star" name="star" (click)="s1()"></ion-icon>
+</div>
+
+
+ <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+  <ion-fab-button [hidden]="!open2" [disabled]="!open2" color="secondary" (click)="captureImage()">
+    <ion-icon name="camera"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+<ion-fab vertical="bottom" horizontal="center" slot="fixed">
+  <ion-fab-button [hidden]="!open1" [disabled]="!open1" color="danger" (click)="shareImage()" (click)="addCredits()" (click)="addStar()">
+    <ion-icon name="share"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+<ion-fab vertical="bottom" horizontal="center" slot="fixed">
+  <ion-fab-button [hidden]="!open3" [disabled]="!open3" color="success" routerLink="/main">
+    <ion-icon name="home"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+</ion-content>

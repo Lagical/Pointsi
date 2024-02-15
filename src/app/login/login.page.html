@@ -1,0 +1,21 @@
+
+
+<ion-content>
+  <p class="pointsi">POINTSI</p>
+  <ion-card>
+    <ion-card-title>KIRJAUDU</ion-card-title>
+    <ion-item>
+      <ion-label position="floating"><ion-icon name="person-outline"></ion-icon>Käyttäjänimi</ion-label>
+      <ion-input type="text" [(ngModel)]="username" onkeypress="if(event.charCode === 32)return false"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"><ion-icon name="lock-closed-outline"></ion-icon>Salasana</ion-label>
+      <ion-input type="password" [(ngModel)]="password" onkeypress="if(event.charCode === 32)return false"></ion-input>
+    </ion-item>
+    <br>
+    
+    <ion-button color="button" expand="block" shape="round" (click)="login()">Kirjaudu</ion-button>
+    <br>
+    <span>Etkö omista käyttäjää?&nbsp;<a routerLink="/register">Rekisteröidy tästä</a></span>
+  </ion-card>
+</ion-content>

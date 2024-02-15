@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="main"
+      text="Takaisin">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Ota yhteyttä</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="kortti">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating"><ion-icon name="person-outline"></ion-icon>Oma nimi</ion-label>
+          <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating"><ion-icon name="mail-outline"></ion-icon>Sähköpostiosoite</ion-label>
+          <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Mitä yritystä asia koskee?</ion-label>
+        <ion-select ok-text="OK" cancel-text="Peruuta" placeholder="Valitse yritys">
+          <ion-select-option *ngFor="let comp of companies">{{comp.company_name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating"><ion-icon name="pencil-outline"></ion-icon>Viesti</ion-label>
+        <ion-textarea></ion-textarea>
+      </ion-item>
+      <ion-button color="button" expand="block" shape="round" (click)="logOut()" routerLink="/login" routerDirection="/back">Lähetä</ion-button>
+    </ion-list>
+  </ion-card>
+</ion-content>

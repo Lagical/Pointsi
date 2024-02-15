@@ -1,0 +1,47 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Pointsi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="credits-background">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Pisteet: {{(user | async)?.credits}}</ion-card-title>
+        </ion-card-header>
+        <ion-label class="text1">Valitse pistemäärä</ion-label>
+        <ion-select class="use1" ok-text="OK" cancel-text="Peruuta" [(ngModel)]="point" placeholder="">
+          <ion-select-option *ngFor="let pts of points">{{pts}}</ion-select-option>
+        </ion-select>
+        <ion-label class="text2">Valitse yritys, jossa käytät pisteitä</ion-label>
+        <ion-select class="use2" ok-text="OK" cancel-text="Peruuta" [(ngModel)]="company" placeholder="">
+          <ion-select-option *ngFor="let comp of companies">{{comp.company_name}}</ion-select-option>
+        </ion-select>
+        <ion-button shape="round" color="button" (click)="ptsConf()" id="useCredits">
+          Käytä pisteitä
+        </ion-button>
+      </ion-card>
+    </div>
+    <div>
+      <img src="../assets/background/logo_12.jpg"/>
+    </div>
+
+    <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+      <ion-fab-button color="light" routerLink="/companies">
+        <ion-icon name="camera"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    
+    <ion-footer>
+      <ion-toolbar>
+        <ion-buttons slot="primary">
+          <ion-button class="button-color" (click)="openFirst()">
+            <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+        </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+      
+    </ion-footer>
+</ion-content>

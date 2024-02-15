@@ -1,0 +1,32 @@
+ion-back-button {
+    --color: black;
+}
+
+ion-avatar {
+    padding-top: 10px;
+    margin: auto;
+    width: 200px;  
+    height: 200px;  
+}
+
+.username {
+    text-align: center;
+}
+
+ion-toolbar{
+    --background: #80deea;
+  }
+
+  .ion-color-button {
+    --ion-color-base: #424a4b;
+    color:#80deea;
+  }
+
+  ion-content{
+    --background: #fff url('../../assets/pallot1.png') no-repeat center center / cover;
+}
+.profile {
+  padding: 20px;
+}
+
+

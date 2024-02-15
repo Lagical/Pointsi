@@ -1,0 +1,104 @@
+ion-back-button {
+    --color: black;
+}
+
+ion-toolbar{
+    --background: #80deea;
+  }
+
+  
+  .button-color {
+      --color: black;
+      
+  }
+
+  ion-title {
+      color: black;
+  }
+
+ 
+
+ ion-content {
+   --background: white;
+ 
+ }
+  ion-card-title, ion-card-content {
+      text-align: center;
+      
+  }
+ .credits-background {
+    background:  white;
+    border-bottom: 1px solid white;
+    padding: 10px 10px 10px 10px;
+   
+  }
+  
+  ion-card {
+      margin: 0px;
+      border-radius: 3px;
+  }
+ 
+ ion-fab {
+     bottom: 14px;
+ }
+ ion-footer {
+    position: fixed;
+    bottom: 0px;
+ }
+.content {
+    height: 50%;
+    width: 100%;
+    background: white;
+    text-align: center;
+    animation-name: example;
+    animation-duration: 4s;
+}
+img {
+    width: 100%;
+    height: auto;
+    padding-left: 10px;
+}
+
+.ion-color-button {
+    --ion-color-base: #424a4b;
+    color:#80deea;
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+  }
+
+.text1 {
+    display: flex;
+    justify-content: center;
+   
+}
+
+.text2 {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.use1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.use2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+
+#useCredits:hover {
+    cursor: pointer;
+}
+
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }
+// background: #57dfeb url('../../assets/background/triangles.png')0 0/100% auto no-repeat;
+

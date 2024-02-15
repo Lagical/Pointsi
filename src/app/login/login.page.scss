@@ -1,0 +1,60 @@
+ion-back-button {
+    --color: black;
+}
+
+ion-icon {
+    padding-right: 10px;
+}
+
+ion-item{ --border-color: #80deea; 
+}
+
+ion-card-title {
+    color: #80deea;
+    font-family: "Arial";
+    text-align: center;
+    padding-top: 10px;
+}
+
+.ion-color-button {
+    --ion-color-base: #424a4b;
+    color:#80deea;
+  }
+
+  .pointsi {
+    text-align: center;
+    padding-top: 50px;
+    
+}
+
+ion-content{
+    --background: #fff url('../../assets/pallot1.png') no-repeat center center / cover;
+
+}
+
+ion-toolbar{
+    --background: #80deea;
+  }
+  ion-card {
+    padding: 10px;
+  }
+.button {
+    margin: 15px;
+}
+span{
+    display: flex;
+    justify-content: center;
+}
+.button2 {
+    font-weight: bold;
+}
+a {
+    color:#80deea;
+}
+.bottomText {
+    margin-top: 14em;
+}
+
+
+
+  

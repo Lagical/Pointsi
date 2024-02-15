@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="main"
+      text="Takaisin">
+      </ion-back-button>
+    </ion-buttons> 
+    <ion-title>Valitse yritys</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar placeholder="Etsi yritys" type="text" (ionInput)="listCompanies($event)"></ion-searchbar>
+  <ion-list>
+      <ion-card *ngFor="let amnt of companies">
+        <ion-card-content class="card">
+          {{amnt.company_name}}
+          <br>
+          {{amnt.median}}
+          <ion-icon name="star"></ion-icon>
+          <ion-button class="painike" expand="full" color="white" slot="end" (click)="select(amnt)" routerLink="/home">Valitse</ion-button>
+        </ion-card-content>
+      </ion-card>
+  </ion-list>
+</ion-content>
+
+
